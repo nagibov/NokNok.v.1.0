@@ -3,189 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NokNok Roadmap – HTML Deck</title>  <style>
-    /* --- modern slide layout --- */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    
-    :root {
-      --primary: #4361ee;
-      --primary-light: #4895ef;
-      --secondary: #3a0ca3;
-      --accent: #f72585;
-      --text-dark: #2b2d42;
-      --text-light: #8d99ae;
-      --bg-light: #f8f9fa;
-      --bg-dark: #212529;
-      --success: #2ec4b6;
-      --white: #ffffff;
-      --transition: all 0.3s ease;
-    }
-    
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
-      scroll-behavior: smooth;
-      line-height: 1.6;
-    }
-    
-    .slide {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-      min-height: 100vh;
-      padding: 4rem 8rem;
-      box-sizing: border-box;
-      page-break-after: always;
-      position: relative;
-      overflow: hidden;
-      transition: opacity 0.5s ease;
-    }
-    
-    .slide-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-    }
-    
-    h1, h2 {
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-    }
-    
-    h1 {
-      font-size: 4rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    h2 {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-    
-    ul {
-      margin: 0;
-      padding-left: 1.5rem;
-      list-style-type: none;
-    }
-    
-    li {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    li:before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
-    }
-    
-    p {
-      font-size: 1.25rem;
-      margin: 0.5rem 0;
-    }
-    
-    strong {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
-    /* --- table styles --- */
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      font-size: 1rem;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    
-    th, td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    
-    th {
-      background: var(--primary);
-      color: var(--white);
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-    }
-    
-    tr:last-child td {
-      border-bottom: none;
-    }
-    
-    tbody tr:nth-child(odd) {
-      background-color: rgba(67, 97, 238, 0.05);
-    }
-    
-    tbody tr:hover {
-      background-color: rgba(67, 97, 238, 0.1);
-    }
-    
-    /* --- footer --- */
-    .footer {
-      margin-top: auto;
-      font-size: 1rem;
-      color: var(--text-light);
-      padding-top: 2rem;
-      font-weight: 500;
-    }
-    
-    /* --- responsive design --- */
-    @media (max-width: 768px) {
-      .slide {
-        padding: 2rem 3rem;
-      }
-      
-      h1 {
-        font-size: 3rem;
-      }
-      
-      h2 {
-        font-size: 2rem;
-      }
-      
-      li, p {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <title>NokNok Roadmap – HTML Deck</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Slide 1 -->
-  <section class="slide" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white;">
-    <div style="position: relative; z-index: 2;">
-      <h1 style="-webkit-text-fill-color: white;">NokNok Roadmap</h1>
-      <h2 style="color: rgba(255,255,255,0.9); margin-top: 1rem;">Release Plan 2025</h2>
-      <div class="footer" style="color: rgba(255,255,255,0.8);">Version 1.0 → 1.2</div>
+  <section class="slide cover-slide">
+    <div class="slide-content">
+      <h1 class="white-title">NokNok Roadmap</h1>
+      <h2 class="white-subtitle">Release Plan 2025</h2>
+      <div class="footer light-footer">Version 1.0 → 1.2</div>
     </div>
-    <div style="position: absolute; right: -5%; bottom: -5%; width: 30%; height: 30%; background: var(--accent); opacity: 0.3; border-radius: 50%;"></div>
-    <div style="position: absolute; right: 10%; top: 20%; width: 15%; height: 15%; background: var(--primary-light); opacity: 0.2; border-radius: 50%;"></div>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
   </section>
 
   <!-- Slide 2: Version 1.0 -->
   <section class="slide">
     <div class="slide-content">
-      <h2>Version 1.0 <span style="font-weight: 300; color: var(--accent);">— End July</span></h2>
+      <h2>Version 1.0 <span class="accent-text">— End July</span></h2>
       <ul>
         <li>Departments &amp; Offers</li>
         <li>Kiosk mode</li>
@@ -196,13 +32,13 @@
         <li>Wish‑listed payment methods</li>
       </ul>
     </div>
-    <div style="position: absolute; left: -10%; bottom: -10%; width: 25%; height: 25%; background: var(--primary-light); opacity: 0.05; border-radius: 50%;"></div>
+    <div class="bg-circle circle-3"></div>
   </section>
 
   <!-- Slide 3: Why it matters -->
   <section class="slide">
     <div class="slide-content">
-      <h2>Why Version 1.0 <span style="font-weight: 400; color: var(--secondary);">Matters</span></h2>
+      <h2>Why Version 1.0 <span class="secondary-text">Matters</span></h2>
       <ul>
         <li>Runs in <strong>live production</strong></li>
         <li>Catalog syncs with ERP, managed via portal</li>
@@ -211,14 +47,14 @@
         <li>Current drivers fulfil all deliveries</li>
       </ul>
     </div>
-    <div style="position: absolute; right: -5%; top: 20%; width: 20%; height: 20%; background: var(--accent); opacity: 0.05; border-radius: 50%;"></div>
+    <div class="bg-circle circle-4"></div>
   </section>
 
   <!-- Slide 4: Functional Gaps & Roadmap -->
   <section class="slide">
-    <div class="slide-content" style="width: 100%;">
-      <h2>Functional Gaps &amp; <span style="font-weight: 400; color: var(--secondary);">Roadmap</span></h2>
-      <div style="overflow-x: auto; margin-top: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 12px;">
+    <div class="slide-content full-width">
+      <h2>Functional Gaps &amp; <span class="secondary-text">Roadmap</span></h2>
+      <div class="table-container">
         <table>
           <thead>
             <tr>
@@ -244,7 +80,7 @@
   <!-- Slide 5: UI / UX -->
   <section class="slide">
     <div class="slide-content">
-      <h2>UI &amp; <span style="font-weight: 400; color: var(--secondary);">UX</span></h2>
+      <h2>UI &amp; <span class="secondary-text">UX</span></h2>
       <ul>
         <li>Dev started before final UI comps</li>
         <li>UI tweaks paused → UX flow first</li>
@@ -252,13 +88,13 @@
         <li>Visual updates resume in v1.1</li>
       </ul>
     </div>
-    <div style="position: absolute; left: 60%; bottom: 10%; width: 40%; height: 40%; background: var(--primary); opacity: 0.03; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div>
+    <div class="bg-circle circle-5"></div>
   </section>
 
   <!-- Slide 6: Content & Data -->
   <section class="slide">
     <div class="slide-content">
-      <h2>Content &amp; <span style="font-weight: 400; color: var(--secondary);">Data</span> Dependencies</h2>
+      <h2>Content &amp; <span class="secondary-text">Data</span> Dependencies</h2>
       <ul>
         <li>Department/category icons</li>
         <li>Collection data per department</li>
@@ -266,89 +102,44 @@
         <li>Reporting definitions</li>
         <li>Bundle‑deal &amp; discount rules</li>
       </ul>
-      <p style="font-style: italic; color: var(--accent); margin-top: 1.5rem;">*Core UI sections stay empty until these arrive*</p>
+      <p class="note">*Core UI sections stay empty until these arrive*</p>
     </div>
-    <div style="position: absolute; right: 5%; bottom: 20%; width: 15%; height: 15%; background: var(--secondary); opacity: 0.05; border-radius: 50%;"></div>
+    <div class="bg-circle circle-6"></div>
   </section>
 
   <!-- Slide 7: Notifications -->
   <section class="slide">
     <div class="slide-content">
-      <h2>Notifications &amp; <span style="font-weight: 400; color: var(--secondary);">In‑App</span> Messages</h2>
+      <h2>Notifications &amp; <span class="secondary-text">In‑App</span> Messages</h2>
       <ul>
         <li>Final copy &amp; templates still pending</li>
         <li>Essential for orders, offers, account updates</li>
         <li>Please share approved wording → we integrate &amp; QA</li>
       </ul>
     </div>
-    <div style="position: absolute; left: 10%; top: 30%; width: 20%; height: 20%; background: var(--primary-light); opacity: 0.03; border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;"></div>
+    <div class="bg-circle circle-7"></div>
   </section>
 
   <!-- Slide 8: Timeline -->
   <section class="slide">
     <div class="slide-content">
-      <h2>Release <span style="font-weight: 400; color: var(--secondary);">Timeline</span></h2>
-      <ul style="margin-top: 1.5rem;">
+      <h2>Release <span class="secondary-text">Timeline</span></h2>
+      <ul class="timeline-list">
         <li><strong>v1.0</strong> – End July</li>
         <li><strong>v1.1</strong> – End August</li>
         <li><strong>v1.2</strong> – End September</li>
       </ul>
-      <p style="margin-top: 1.5rem; font-style: italic;">Scope locks per release to maintain momentum.</p>
+      <p class="note">Scope locks per release to maintain momentum.</p>
     </div>
-    <div style="position: absolute; right: -10%; bottom: -5%; width: 35%; height: 35%; background: var(--secondary); opacity: 0.03; border-radius: 50%;"></div>
+    <div class="bg-circle circle-8"></div>
   </section>
 
   <!-- Navigation Controls -->
-  <div id="navigation" style="position: fixed; bottom: 20px; right: 20px; z-index: 100; display: flex; gap: 10px;">
-    <button id="prev" style="background: var(--primary); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">←</button>
-    <button id="next" style="background: var(--primary); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">→</button>
+  <div id="navigation">
+    <button id="prev">←</button>
+    <button id="next">→</button>
   </div>
 
-  <!-- Simple navigation script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const slides = document.querySelectorAll('.slide');
-      let currentSlide = 0;
-      
-      // Initialize
-      updateSlides();
-      
-      // Event listeners
-      document.getElementById('prev').addEventListener('click', prevSlide);
-      document.getElementById('next').addEventListener('click', nextSlide);
-      
-      // Keyboard navigation
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') prevSlide();
-        if (e.key === 'ArrowRight') nextSlide();
-      });
-      
-      function prevSlide() {
-        if (currentSlide > 0) {
-          currentSlide--;
-          updateSlides();
-        }
-      }
-      
-      function nextSlide() {
-        if (currentSlide < slides.length - 1) {
-          currentSlide++;
-          updateSlides();
-        }
-      }
-      
-      function updateSlides() {
-        slides.forEach((slide, index) => {
-          if (index === currentSlide) {
-            slide.style.display = 'flex';
-            slide.style.opacity = '1';
-          } else {
-            slide.style.display = 'none';
-            slide.style.opacity = '0';
-          }
-        });
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
