@@ -322,3 +322,77 @@ tbody tr:hover {
     font-size: 1.1rem;
   }
 }
+
+/* Print styles */
+@media print {
+  /* Ensure each slide appears on its own page */
+  .slide {
+    display: flex !important; /* Override any JS display:none */
+    opacity: 1 !important; /* Override any JS opacity settings */
+    page-break-after: always;
+    page-break-inside: avoid;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Hide navigation buttons when printing */
+  #navigation, 
+  #prev, 
+  #next, 
+  button#prev, 
+  button#next {
+    display: none !important;
+  }
+  
+  /* Ensure background elements are visible */
+  .bg-circle {
+    opacity: 0.5 !important;
+    transform: scale(1) !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  /* Ensure all content is visible */
+  .slide-content,
+  h1, h2, ul, li, p, table {
+    opacity: 1 !important;
+    transform: none !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  /* Ensure table styles are applied for printing */
+  table, th, td {
+    border: 1px solid #ddd !important; /* Ensure borders are visible */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  th {
+    background-color: var(--primary) !important; /* Ensure header background is visible */
+    color: var(--white) !important; /* Ensure header text color is visible */
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: rgba(67, 97, 238, 0.05) !important; /* Ensure odd row background is visible */
+  }
+  
+  /* Adjust paper size and margins for presentation */
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+  
+  /* Hide any elements that should only appear on screen */
+  .screen-only {
+    display: none !important;
+  }
+  
+  /* Make text and backgrounds print properly */
+  body {
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
